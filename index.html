@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Read 🥺❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .initial-content {
+            display: block;
+        }
+        
+        h1 {
+            color: #e91e63;
+            font-size: 2.8rem;
+            font-family: 'Rockwell Extra Bold';
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            color: #ff4081;
+            font-size: 1.4rem;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .heart-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .heart {
+            font-size: 2.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .heart:nth-child(2n) {
+            animation-delay: 0.5s;
+            color: #ff4081;
+        }
+        
+        .heart:nth-child(3n) {
+            animation-delay: 1s;
+            color: #e91e63;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .button-container {
+            margin: 40px 0;
+            position: relative;
+            height: 120px;
+        }
+        
+        .yes-btn {
+            background: linear-gradient(to right, #e91e63, #ff4081);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.8rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .yes-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 25px rgba(233, 30, 99, 0.5);
+        }
+        
+        .no-btn {
+            background: linear-gradient(to right, #757575, #9e9e9e);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.8rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(117, 117, 117, 0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            position: absolute;
+        }
+        
+        .no-btn:hover {
+            background: linear-gradient(to right, #9e9e9e, #bdbdbd);
+        }
+        
+        .message-container {
+            display: none;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .message-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            text-align: left;
+            
+        }
+        
+        .romantic-message {
+            flex: 1;
+            font-size: 1.4rem;
+            font-family: 'Blackadder ITC';
+            line-height: 1.6;
+            color: #5d4037;
+        }
+        
+        .two-column-section {
+            display: flex;
+            gap: 30px;
+            margin: 20px 0;
+            width: 100%;
+            
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 0; /* Prevents overflow issues */
+            
+        }
+        
+        .column p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-family: 'Blackadder ITC';
+        }
+        
+        .column-heading {
+            color: #e91e63;
+            font-size: 1.3rem;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        .image-container {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+        }
+        
+        .girlfriend-image {
+            width: 100%;
+            height: auto;
+            max-height: 950px;
+            object-fit: contain;
+            border-radius: 35px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .girlfriend-image:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Valentine Images Gallery */
+        .valentine-gallery {
+            margin-top: 30px;
+            width: 100%;
+        }
+        
+        .gallery-title {
+            color: #e91e63;
+            font-size: 1.4rem;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .gallery-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .valentine-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        /* Different styles for each image */
+        .val-img-1 {
+            border-radius: 20px;
+            border: 6px solid #ff4081;
+            box-shadow: 0 8px 25px rgba(255, 64, 129, 0.3);
+            transform: rotate(-5deg);
+        }
+        
+        .val-img-2 {
+            border-radius: 50%;
+            border: 6px solid #e91e63;
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+            transform: rotate(0deg);
+        }
+        
+        .val-img-3 {
+            border-radius: 10px;
+            border: 6px solid #ff80ab;
+            box-shadow: 0 8px 25px rgba(255, 128, 171, 0.3);
+            transform: rotate(5deg);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        }
+        
+        .valentine-img:hover {
+            transform: scale(1.1) rotate(0deg);
+            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.4);
+        }
+        
+        .image-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #e91e63;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .heart-emoji {
+            font-size: 1.8rem;
+            margin: 0 5px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #757575;
+            font-style: italic;
+            font-size: 1.1rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .val {
+            font-size: 1.3rem;
+            color: #ce08d4;
+            /*margin-top: 20px;*/
+            font-family: 'Blackadder ITC';
+            text-align: center;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            font-size: 1.5rem;
+            color: #ff4081;
+            opacity: 0.7;
+            animation: floatAround 15s linear infinite;
+        }
+        
+        @keyframes floatAround {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(100px, -100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .container {
+                max-width: 95%;
+            }
+            
+            .message-content {
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .container {
+                padding: 30px;
+            }
+            
+            .message-content {
+                flex-direction: column;
+            }
+            
+            .image-container {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .valentine-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.2rem; }
+            .yes-btn, .no-btn { 
+                padding: 15px 30px; 
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            .button-container { height: 180px; }
+            .romantic-message { font-size: 1.2rem; }
+            
+            .message-content {
+                text-align: center;
+                gap: 25px;
+            }
+            
+            .two-column-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .column p {
+                text-align: left;
+            }
+            
+            .image-container {
+                max-width: 280px;
+            }
+            
+            .girlfriend-image {
+                max-height: 300px;
+            }
+            
+            .valentine-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .gallery-images {
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            .image-container {
+                max-width: 250px;
+            }
+            
+            .girlfriend-image {
+                max-height: 250px;
+            }
+            
+            .valentine-img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .gallery-title {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.9rem;
+            }
+            
+            .romantic-message {
+                font-size: 1.1rem;
+            }
+            
+            .valentine-img {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .gallery-images {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        
+        <!-- Initial content before clicking YES -->
+        <div class="initial-content" id="initialContent">
+            <h1>MY DEAREST LOVE 🥰❤️</h1>
+            <h1>Will You Be My Valentine? 💖</h1>
+            <p class="subtitle">My dearest, I have something very special to ask you...</p>
+            
+            <div class="heart-container">
+                <div class="heart">❤️</div>
+                <div class="heart">💖</div>
+                <div class="heart">💕</div>
+                <div class="heart">💘</div>
+                <div class="heart">💝</div>
+                <div class="heart">💓</div>
+                <div class="heart">💗</div>
+                <div class="heart">💞</div>
+            </div>
+            
+            <p style="font-size: 1.3rem; color: #5d4037; margin-bottom: 20px;">
+                You mean the world to me, and I can't imagine my life without you. <br>
+                Every moment with you is special, and I want to make this Valentine's Day unforgettable. 💑
+            </p>
+            
+            <div class="button-container">
+                <button class="yes-btn" id="yesButton">YES🥰💖</button>
+                <button class="no-btn" id="noButton">NO😢</button>
+            </div>
+        </div>
+        
+        <!-- Content after clicking YES (hidden by default) -->
+        <div class="message-container" id="messageContainer">
+            <div class="message-content">
+                <div class="romantic-message">
+                    <h2>You've made me the happiest person🥰</h2>
+                    <p>
+                        Mpenzi wangu, kusema kwako <b>NDIYO</b> kunamaanisha kila kitu kwangu.
+                        Kunajaza moyo wangu furaha na kunanifanya nijihisi kama mtu mwenye bahati kubwa zaidi duniani. 💖
+  
+                        <span class="heart-emoji">💖</span><br><br>
+                        Kila siku nikiwa na wewe huhisi kama ndoto nzuri iliyotimia.
+                        Unaangaza dunia yangu kwa tabasamu lako na kuujaza moyo wangu furaha.
+                        Ninaahidi kukuthamini, kukuunga mkono, na kukupenda zaidi kadri siku zinavyopita. 
+                        <span class="heart-emoji">💕</span><br><br>
+
+                        <div class="two-column-section">
+                            <div class="column">
+                                <div class="column-heading">My love,</div>
+                                <p>
+                                    Nikiwa na wewe, upendo siyo tena harakati za kutafuta vipande vilivyopotea; 
+                                    ni amani ya kina ya kujipata kwenye kioo kinachoakisi toleo bora zaidi la nafsi yangu.
+                                    Huoni tu sura yangu—unanielewa: sehemu zangu tulivu, ndoto zangu zenye malengo makubwa, 
+                                    na hofu zisizotamkwa. Machoni pako, sipendwi tu; ninatambuliwa kikamilifu.
+                                    Na hiyo ni zawadi adimu sana, kiasi kwamba nashukuru nyota zangu kila siku kwa hilo. 
+                                    <span style="color: #e91e63;">🌟💖</span>
+                                </p>
+                            </div>
+                            <div class="column">
+                                <div class="column-heading">Forever Yours ❤️</div>
+                                <p>
+                                    Nakupenda zaidi ya maneno rahisi yanavyoweza kubeba. Nakupenda kwa nguvu inayolinda, 
+                                    kwa upole unaoponya, na kwa uthabiti ambao hautafifia—kamwe. Wewe ni zawadi yangu 
+                                    mkubwa zaidi, zawadi yangu ya thamani sana, na upendo wangu wa milele. 💖
+                                    All of me, for all of you. <span style="color: #e91e63;">💍🌹</span>
+                                </p>
+                                <p>
+                                    <strong>❤️ Forever yours, my love.</strong> <span style="color: #e91e63;">🌊❤️</span>
+                                </p>
+                            </div>
+                        </div>
+                    </p>    
+                        
+                        <p class="val">
+                            This Valentine's Day, I want to celebrate the incredible bond we share. 
+                            You are not just my girlfriend; you are my best friend, my confidante, 
+                            and my soulmate. I am so grateful for every moment we spend together, 
+                            and I look forward to creating many more beautiful memories with you.<span style="color: #e91e63;">💖</span>
+
+                            This Valentine's Day is just the beginning of our forever journey together. 
+                            I love you more than words can express. <span style="color: #e91e63;">💘</span>
+                        
+                            I love you more than words can express, and I can't wait to see what the future holds for us. 
+                            Happy Valentine's Day, my love. 💖
+                        </p>
+                                            
+                </div>
+                <div class="image-container">
+                    <img src="./image.png" alt="My beautiful girlfriend" class="girlfriend-image" id="girlfriendImage">
+                    <div class="image-caption">The love of my life ❤️</div>
+                    
+                    <!-- Valentine Images Gallery -->
+                    <div class="valentine-gallery">
+                        <div class="gallery-title">Our Valentine Memories 💕</div>
+                        <div class="gallery-images">
+                            <img src="./val1.jpg" alt="Valentine Memory 1" class="valentine-img val-img-1">
+                            <img src="./val2.jpg" alt="Valentine Memory 2" class="valentine-img val-img-2">
+                            <img src="./val3.jpg" alt="Valentine Memory 3" class="valentine-img val-img-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="footer">
+                With all my love, forever and always. ❤️<br>
+                You're the best thing that ever happened to me.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesButton = document.getElementById('yesButton');
+            const noButton = document.getElementById('noButton');
+            const messageContainer = document.getElementById('messageContainer');
+            const initialContent = document.getElementById('initialContent');
+            const floatingHearts = document.getElementById('floatingHearts');
+            
+            // Create floating hearts animation
+            function createFloatingHearts() {
+                for (let i = 0; i < 15; i++) {
+                    const heart = document.createElement('div');
+                    heart.classList.add('floating-heart');
+                    heart.innerHTML = '❤️';
+                    heart.style.left = `${Math.random() * 100}%`;
+                    heart.style.animationDelay = `${Math.random() * 15}s`;
+                    floatingHearts.appendChild(heart);
+                }
+            }
+            
+            createFloatingHearts();
+            
+            // Make the NO button move away when hovered
+            noButton.addEventListener('mouseover', function() {
+                const container = document.querySelector('.button-container');
+                const containerRect = container.getBoundingClientRect();
+                const buttonRect = noButton.getBoundingClientRect();
+                
+                // Calculate available space
+                const maxX = containerRect.width - buttonRect.width;
+                const maxY = containerRect.height - buttonRect.height;
+                
+                // Generate random position within container
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+                
+                // Move the button to the random position
+                noButton.style.left = `${randomX}px`;
+                noButton.style.top = `${randomY}px`;
+            });
+            
+            // Handle YES button click
+            yesButton.addEventListener('click', function() {
+                // Hide all initial content
+                initialContent.style.display = 'none';
+                
+                // Show only the romantic message container
+                messageContainer.style.display = 'block';
+                
+                // Create a shower of hearts animation
+                createHeartShower();
+                
+                // Add hover effects to valentine images
+                addValentineImageEffects();
+            });
+            
+            // Create a shower of hearts when she says YES
+            function createHeartShower() {
+                const hearts = ['❤️', '💖', '💕', '💘', '💝', '💓', '💗', '💞'];
+                
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.classList.add('floating-heart');
+                        heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                        heart.style.left = `${Math.random() * 100}%`;
+                        heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+                        heart.style.animationDuration = `${Math.random() * 5 + 3}s`;
+                        
+                        document.body.appendChild(heart);
+                        
+                        // Remove heart after animation
+                        setTimeout(() => {
+                            heart.remove();
+                        }, 5000);
+                    }, i * 100);
+                }
+            }
+            
+            // Add special effects to valentine images
+            function addValentineImageEffects() {
+                const valentineImages = document.querySelectorAll('.valentine-img');
+                
+                valentineImages.forEach((img, index) => {
+                    img.addEventListener('click', function() {
+                        // Create sparkle effect
+                        for (let i = 0; i < 8; i++) {
+                            setTimeout(() => {
+                                const rect = img.getBoundingClientRect();
+                                const x = rect.left + Math.random() * rect.width;
+                                const y = rect.top + Math.random() * rect.height;
+                                
+                                const sparkle = document.createElement('div');
+                                sparkle.style.position = 'absolute';
+                                sparkle.style.width = '10px';
+                                sparkle.style.height = '10px';
+                                sparkle.style.backgroundColor = index === 0 ? '#ff4081' : 
+                                                              index === 1 ? '#e91e63' : '#ff80ab';
+                                sparkle.style.borderRadius = '50%';
+                                sparkle.style.left = `${x}px`;
+                                sparkle.style.top = `${y}px`;
+                                sparkle.style.pointerEvents = 'none';
+                                sparkle.style.animation = 'sparkle 1s linear forwards';
+                                document.body.appendChild(sparkle);
+                                
+                                setTimeout(() => {
+                                    sparkle.remove();
+                                }, 1000);
+                            }, i * 100);
+                        }
+                    });
+                });
+            }
+            
+            // Add sparkle animation to CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes sparkle {
+                    0% { transform: scale(0); opacity: 1; }
+                    100% { transform: scale(1); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
